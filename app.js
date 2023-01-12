@@ -3,6 +3,9 @@ const container = document.getElementById('container');
 let rows = document.getElementsByClassName("Rows");
 let cells = document.getElementsByClassName("columns");
 
+console.log(rows);
+console.log(container);
+
 const makeRow =(rowAmount)=>{
     for(let i=0; i<rowAmount; i++){
         let row = document.createElement("div");
@@ -14,6 +17,7 @@ const makeRow =(rowAmount)=>{
 const makeColumn =(columnAmount)=>{
     for(let i=0; i<rows.length; i++){
         for(let j=0; j<columnAmount; j++){
+           
             let column = document.createElement("div");
             rows[j].appendChild(column).className = "columns";
           }
@@ -21,9 +25,11 @@ const makeColumn =(columnAmount)=>{
 
     }
  
+    //creating a method to create the grids
 
 const makeGrid = ()=>{
-    makeRow(16);
-    makeColumn(16);
+    makeRow(8);
+    makeColumn(8);
 }
 
+makeGrid();

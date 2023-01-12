@@ -1,0 +1,24 @@
+.body{
+    
+}
+
+
+
+.columns{
+    border: 1px solid gray;
+    min-width: 50px;
+    min-height: 50px;
+   display: flex;
+   justify-content: center
+  
+}
+.Rows{
+    display: flex;
+    justify-content: center;
+
+}
+#Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
