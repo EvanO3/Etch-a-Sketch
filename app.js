@@ -1,3 +1,6 @@
+// randomized color Array
+const colour =['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71']
+
 //making the row
 const container = document.getElementById('container');
 let rows = document.getElementsByClassName("Rows");
@@ -9,6 +12,13 @@ console.log(container);
 const makeRow =(rowAmount)=>{
     for(let i=0; i<rowAmount; i++){
         let row = document.createElement("div");
+        //adds action listener to rows
+        row.addEventListener('mouseover', ()=>{
+              setColorToElement(row);
+        })
+        row.addEventListener('mouseout', ()=>{
+            setColorFromElement(row);
+      })
        container.appendChild(row).className="Rows";
     }
 }
@@ -24,6 +34,17 @@ const makeColumn =(columnAmount)=>{
         }
 
     }
+
+
+    // adds the hover
+  
+//makes method to add colors 
+function setColorToEl(element){
+
+}
+
+    //Randomize colour
+    
  
     //creating a method to create the grids
 
