@@ -1,56 +1,18 @@
-// randomized color Array
-const colour =['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71']
+function createBaord(size){
+    let board = document.querySelector('.board');
+// This creates the  columns of the board and makes the columns have 1 16th of the width
+board.style.gridTemplateColumns = `repeat(${size} ,1fr)`;
+// This creates the rows of the board and makes the rows have 1 16th of the width
+board.style.gridTemplateRows = `repeat(${size} ,1fr)`;
 
-//making the row
-const container = document.getElementById('container');
-let rows = document.getElementsByClassName("Rows");
-let cells = document.getElementsByClassName("columns");
 
-console.log(rows);
-console.log(container);
-
-const makeRow =(rowAmount)=>{
-    for(let i=0; i<rowAmount; i++){
-        let row = document.createElement("div");
-        //adds action listener to rows
-        row.addEventListener('mouseover', ()=>{
-              setColorToElement(row);
-        })
-        row.addEventListener('mouseout', ()=>{
-            setColorFromElement(row);
-      })
-       container.appendChild(row).className="Rows";
-    }
+for(let i =0; i<256; i++){
+       let box = document.createElement('div');
+       box.style.backgroundColor ="blue";
+       board.insertAdjacentElement("beforeend",box);
 }
-// making the column 
-
-const makeColumn =(columnAmount)=>{
-    for(let i=0; i<rows.length; i++){
-        for(let j=0; j<columnAmount; j++){
-           
-            let column = document.createElement("div");
-            rows[j].appendChild(column).className = "columns";
-          }
-        }
-
-    }
-
-
-    // adds the hover
-  
-//makes method to add colors 
-function setColorToEl(element){
-
 }
+createBaord(16);
 
-    //Randomize colour
-    
- 
-    //creating a method to create the grids
 
-const makeGrid = ()=>{
-    makeRow(8);
-    makeColumn(8);
-}
-
-makeGrid();
+// c
