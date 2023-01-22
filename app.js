@@ -1,5 +1,5 @@
 let color = "black";
-
+let click = true;
 function createBoard(size){
    let brd = document.querySelector('.board');
    let sq = brd.querySelector("div");
@@ -29,13 +29,18 @@ function changeSize(input){
 
 
 function colourSq(){
-   if(color ==='random'){
+  if(click){
+
+    if(color ==='random'){
     this.style.backgroundColor=`hsl(${Math.random()*360},100%,50%)`;
    }
    else{
     this.style.backgroundColor=color;
    }
 }
+
+}
+
  function changeColor(choice){
     color = choice;
  }
@@ -46,3 +51,14 @@ function colourSq(){
     sq.forEach((div) => (div.style.backgroundColor = "white"));
 
  }
+
+ document.querySelector('body').addEventListener('click', ()=>{
+    click = !click;
+    if(click){
+        document.querySelector('.mode').textContent= 'Mode: Colouring'
+    }
+    else{
+        document.querySelector('.mode').textContent ="Mode: Not Colouring"
+    }
+ })
+ 
