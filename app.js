@@ -11,7 +11,7 @@ function createBoard(size){
    for(let i=0; i<total; i++){
     let sq = document.createElement('div');
     sq.addEventListener('mouseover', colourSq);
-    sq.style.backgroundColor ='pink';
+    sq.style.backgroundColor ='white';
     brd.insertAdjacentElement('beforeend', sq);
    }
 }
@@ -23,7 +23,7 @@ function changeSize(input){
         createBoard(input)
     }
     else{
-        console.log('Error.. To many Squares')
+       prompt('Error.. To many Squares')
     }
 }
 
@@ -45,12 +45,11 @@ function colourSq(){
     color = choice;
  }
 
- function resetBoard(){
-    let brd = document.querySelector('.board');
-    let sq = brd.querySelector('div');
-    sq.forEach((div) => (div.style.backgroundColor = "white"));
-
- }
+//  function resetBoard(){
+//     brd.childNode.forEach((child) => 
+//     child.style.backgroundColor = "white"
+//     )
+//  }
 
  document.querySelector('body').addEventListener('click', ()=>{
     click = !click;
@@ -62,3 +61,10 @@ function colourSq(){
     }
  })
  
+
+ let reset = document.querySelector('.reset');
+ reset.addEventListener('click', ()=>{
+       let brd = document.querySelector('.board');
+       let sq = brd.querySelectorAll("div");
+       sq.forEach((div) =>(div.style.backgroundColor="white"));
+ })
