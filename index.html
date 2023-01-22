@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>SketchPad</title>
 </head>
 <body>
  <div class="container">
-    <div class="title"><h1>Evan's Sketch Pad</h1></div></div>
+    <div class="title"><h1>Evan's Sketch Pad</h1></div>
+    <div class="mode">Mode: Colouring</div>
     <div class="content">
         <div class="board"></div>
         <div class="buttons">
             <button  onclick ="changeColor('Black')">Black</button>
             <button onclick ="changeColor('Red')" >Red</button>
             <button onclick ="changeColor('random')">Rainbow</button>
-            <button onclick ="resetBoard()">Rest</button>
+            <button class ='reset' onclick ="resetBoard()">Reset</button>
         </div>
         <div>
             <input
@@ -29,6 +30,8 @@
         </div>
     </div>
  </div>
+ 
+
 </body>
 <script src="app.js"></script>
 </html>
