@@ -1,8 +1,15 @@
 body{
     background-color:#a0d2eb;
+
     
 }
 
+.title,.mode{
+    font-size: 20px;
+    font-weight: bold;
+    font-family:cursive;
+
+}
 .board{
     width: 500px;
     height: 500px;
@@ -35,18 +42,28 @@ body{
     
 }
 
-.blackbtn, .redBtn, .randomBtn, .reset:hover{
+.blackbtn, .redBtn, .randomBtn, .reset{
     cursor: pointer;
+     border-radius: 12px;
 }
+
+
 .blackbtn{
-    border-radius: 15px;
+   
    
 }
 
 .redBtn{
-    border-radius: 15px;
+  
+}
+
+.setVal:hover{
+    cursor:pointer;
+
 }
 
 .setVal{
-    border-radius: 15px;
+    border-radius: 12px;
 }
+
+
