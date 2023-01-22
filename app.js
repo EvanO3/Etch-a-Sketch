@@ -1,28 +1,31 @@
-function createBaord(size){
-   
+function createBoard(size){
+   let brd = document.querySelector('.board');
+   let sq = brd.querySelector("div");
+   //sq.forEach((div) => div.remove());
+   brd.style.gridTemplateColumns =`repeat(${size}, 1fr)`;
+   brd.style.gridTemplateRows =`repeat(${size}, 1fr)`;
  
-    let board = document.querySelector('.board');
- 
-// This creates the  columns of the board and makes the columns have 1 16th of the width
-board.style.gridTemplateColumns = `repeat(${size} ,1fr)`;
-// This creates the rows of the board and makes the rows have 1 16th of the width
-board.style.gridTemplateRows = `repeat(${size} ,1fr)`;
-
-
-let total = size*size;
-for(let i =0; i<total; i++){
-       let box = document.createElement('div');
-       box.style.backgroundColor ="blue";
-       board.insertAdjacentElement("beforeend",box);
-}
+   let total = size*size;
+   for(let i=0; i<total; i++){
+    let sq = document.createElement('div');
+    sq.addEventListener('mouseover', colourSq);
+    sq.style.backgroundColor ='pink';
+    brd.insertAdjacentElement('beforeend', sq);
+   }
 }
 
+createBoard(16);
 
-
-// this function lets you change the size of the baord element
-
-function changeSize (inputSize){
-    createBoard(inputSize);
+function changeSize(input){
+    if(input>=2 && input<=100){
+        createBoard(input)
+    }
+    else{
+        console.log('Error.. To many Squares')
+    }
 }
 
-createBaord(16);
+
+function colourSq(){
+    this.style.backgroundColor='red';
+}
