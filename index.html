@@ -14,23 +14,23 @@
     <div class="content">
         <div class="board"></div>
         <div class="buttons">
-            <button  onclick ="changeColor('Black')">Black</button>
-            <button onclick ="changeColor('Red')" >Red</button>
-            <button onclick ="changeColor('random')">Rainbow</button>
+            <button class ='blackbtn' onclick ="changeColor('Black')">Black</button>
+            <button class ='redBtn' onclick ="changeColor('Red')" >Red</button>
+            <button class = 'randomBtn'onclick ="changeColor('random')">Rainbow</button>
             <button class ='reset' onclick ="resetBoard()">Reset</button>
         </div>
-        <div>
+        <div class ='input'>
             <input
              type ="text" 
              placeholder="Size of Board " 
              value="16"
               onclick= "changeSize(this.value)"
               />
-            <button on click="changeSize(this.value)">Set Size of Board</button>
+            <button class= 'setVal'on click="changeSize(this.value)">Set Size of Board</button>
         </div>
     </div>
  </div>
- 
+
 
 </body>
 <script src="app.js"></script>
