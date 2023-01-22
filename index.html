@@ -18,11 +18,16 @@
             <button>Rainbow</button>
         </div>
         <div>
-            <input type ="text" placeholder="size of board " size="16"/>
-            <button>Set Size of Board</button>
+            <input
+             type ="text" 
+             placeholder="Size of Board " 
+             value="16"
+              onclick= "changeSize(this.value)"
+              />
+            <button on click="changeSize(this.value)">Set Size of Board</button>
         </div>
     </div>
  </div>
-    <script src="app.js"></script>
 </body>
+<script src="app.js"></script>
 </html>
