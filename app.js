@@ -18,8 +18,8 @@ function createBoard(size){
 
 createBoard(16);
 
-function changeSize(input){
-    if(input>=2 && input<=100){
+function changeBrdSize(input){
+    if(input >=2 && input<=100){
         createBoard(input)
     }
     else{
@@ -45,11 +45,7 @@ function colourSq(){
     color = choice;
  }
 
-//  function resetBoard(){
-//     brd.childNode.forEach((child) => 
-//     child.style.backgroundColor = "white"
-//     )
-//  }
+
 
  document.querySelector('body').addEventListener('click', ()=>{
     click = !click;
@@ -68,3 +64,7 @@ function colourSq(){
        let sq = brd.querySelectorAll("div");
        sq.forEach((div) =>(div.style.backgroundColor="white"));
  })
+
+
+ 
+
